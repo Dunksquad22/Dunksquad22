@@ -135,7 +135,7 @@ ISP           : ${info.isp}
   async function lookupMyIP() {
     output.textContent = 'Looking up your IP...';
     try {
-      const res = await fetch('https://ipapi.co/json/');
+      const res
       if(!res.ok) throw new Error('Failed to get your IP info');
       const data = await res.json();
       output.textContent = formatInfo(data);
